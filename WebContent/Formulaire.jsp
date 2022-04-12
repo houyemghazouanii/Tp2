@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Affichage de Formulaire </title>
+<title>Formulaire </title>
 </head>
 <body>
-<% if (request.getParameter("nom")==null && request.getParameter("email")==null) { %>
+<% if (request.getParameter("nom")==null && request.getParameter("email")==null||(request.getParameter("nom").equals(""))) { %>
 <p><b> Vous n'avez fourni aucune information </b> </p>
       <% } else { %>
       <%! String nom, email; %>

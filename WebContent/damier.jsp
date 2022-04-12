@@ -7,34 +7,25 @@
 <title> Damier </title>
 </head>
 <body>
-<p align="center"><b> Damier de 10 lignes par 10 colonnes </b></p>
-    <%! int N=10; %>
+  <p align="center"><b> Damier de <%= n %> lignes par <%= n %> colonnes </b></p>
+    <%! int n=10; %>
     <%! int i; %>
     <%! int j; %>
-  <table border="4" align="center">
-	<%for ( i = 1; i <= N; i++){ %>
+  <table border="2" align="center">
+	<% for (i = 1; i <= n; i++){ %>
 	<tr>
-	<%for (j =1; j<=N ; j++) { %>
-         <% if (((j % 2) != 0 ) && (i%2 ) != 0 ) { %> 
-         
-         <td bgcolor="white">
-         &nbsp; &nbsp; &nbsp;
-         </td>
-         <td bgcolor="black">
-         &nbsp; &nbsp; &nbsp; 
-         </td>
+	<% for (j =1; j<=n ; j++) { %>
+        <% if (((j % 2) != 0 ) && (i%2 ) != 0 ) { %> 
+         <td bgcolor="white" width="20px" height="20px"> </td>
+         <td bgcolor="black" width="20px" height="20px"> </td>
+          
          <% } else if(((j % 2) != 0 ) && (i%2 ) == 0 )  { %>
-         <td bgcolor="black">
-         &nbsp; &nbsp; &nbsp; 
-         </td>
-         <td bgcolor="white">
-         &nbsp; &nbsp; &nbsp; 
-         </td>
-         <%} %>
-      <%}%>
-      </tr>
+         <td bgcolor="black" width="20px" height="20px"> </td>
+         <td bgcolor="white" width="20px" height="20px"> </td>
+        <%} %>
+     <%}%>
+     </tr>
       <%} %>
-      </table>
-
+   </table>
 </body>
 </html>

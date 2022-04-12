@@ -8,15 +8,15 @@
 
 </head>
 <body>
-      <% if (request.getParameter("nom")==null && request.getParameter("prenom")==null) { %>
-       <p><b> invalide user </b> </p>
+      <% if ((request.getParameter("nom")==null) || (request.getParameter("nom").equals(""))) { %>
+       <p><b> Entrer votre nom </b> </p>
       <% } else { %>
-       <%! String nom,prenom; %>
+       <%! String nom; %>
        <% nom = request.getParameter("nom");
-         prenom = request.getParameter("prenom"); %>
+         %>
         <h2> Hello </h2> 
       <p> <b> vous êtes :</b> </p>
-       <%= nom %>  <%= prenom %> 
+       <%= nom %> 
        <% } %>
 
 
